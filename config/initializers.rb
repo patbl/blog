@@ -45,8 +45,7 @@ Bridgetown.configure do |config|
   # ensure you use the `relative_url` helper for all links and assets in your HTML.
   # If you're using esbuild for frontend assets, edit `esbuild.config.js` to
   # update `publicPath`.
-  #
-  # base_path "/"
+  base_path "/blog"
 
   # You can also modify options on this configuration object directly, like so:
   #
