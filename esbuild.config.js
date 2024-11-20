@@ -34,11 +34,11 @@ import build from "./config/esbuild.defaults.js"
  */
 const esbuildOptions = {
   plugins: [
-    // add new plugins here...
   ],
   globOptions: {
     excludeFilter: /\.(dsd|lit)\.css$/
-  }
+  },
+  publicPath: "/blog",
 }
 
 build(esbuildOptions)
