@@ -26,6 +26,9 @@ GEM
       bridgetown-paginate (= 2.0.0.beta3)
     bridgetown-builder (2.0.0.beta3)
       bridgetown-core (= 2.0.0.beta3)
+    bridgetown-cloudinary (2.1.0)
+      bridgetown (>= 1.2.0.beta2, < 2.0)
+      cloudinary (>= 0.13)
     bridgetown-core (2.0.0.beta3)
       activesupport (>= 6.0, < 8.0)
       addressable (~> 2.4)
@@ -58,6 +61,11 @@ GEM
       zeitwerk (~> 2.5)
     bridgetown-paginate (2.0.0.beta3)
       bridgetown-core (= 2.0.0.beta3)
+    cloudinary (2.2.0)
+      faraday (>= 2.0.1, < 3.0.0)
+      faraday-follow_redirects (~> 0.3.0)
+      faraday-multipart (~> 1.0, >= 1.0.4)
+      ostruct
     concurrent-ruby (1.3.4)
     connection_pool (2.4.1)
     csv (3.3.0)
@@ -70,6 +78,8 @@ GEM
       logger
     faraday-follow_redirects (0.3.0)
       faraday (>= 1, < 3)
+    faraday-multipart (1.0.4)
+      multipart-post (~> 2)
     faraday-net_http (3.4.0)
       net-http (>= 0.5.0)
     ffi (1.17.0)
@@ -98,9 +108,11 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.6.1)
     minitest (5.25.1)
+    multipart-post (2.4.1)
     net-http (0.5.0)
       uri
     nio4r (2.7.4)
+    ostruct (0.6.1)
     public_suffix (6.0.1)
     puma (6.4.3)
       nio4r (~> 2.0)
@@ -147,6 +159,7 @@ PLATFORMS
 
 DEPENDENCIES
   bridgetown (~> 2.0.0.beta3)
+  bridgetown-cloudinary (~> 2.1)
   puma (< 7)
 
 BUNDLED WITH
