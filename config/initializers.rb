@@ -100,4 +100,6 @@ Bridgetown.configure do |config|
   init :"bridgetown-cloudinary" do
     cloud_name "patbl"
   end
+
+  init :"bridgetown-feed"
 end

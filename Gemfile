@@ -36,3 +36,5 @@ gem "puma", "< 7"
 # gem "nokolexbor", "~> 0.5"
 
 gem "bridgetown-cloudinary", "~> 2.1"
+
+gem "bridgetown-feed", "~> 3.1"
