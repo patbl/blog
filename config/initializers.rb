@@ -26,7 +26,7 @@ Bridgetown.configure do |config|
   # See list of timezone values here:
   # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   #
-  # timezone "America/Los_Angeles"
+  timezone "America/Phoenix"
 
   # Add collection pagination features to your site. Documentation here:
   # https://www.bridgetownrb.com/docs/content/pagination
