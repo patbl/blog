@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+require "time"
+require "yaml"
+
+now = Time.now
+title = ARGV.fetch(0) { raise "You must provide a title for the post" }
+
+# Convert title to URL-friendly filename
+file_name_title = title
+  .downcase
+  .gsub(/[^\w\s-]/, "")   # remove all characters except words, spaces, and hyphens
+  .gsub(/\s+/, "-")       # replace one or more spaces with single hyphen
+  .gsub(/-+/, "-")        # replace multiple hyphens with single hyphen
+  .gsub(/^-|-$/, "")      # remove leading and trailing hyphens
+
+front_matter = {
+  "title" => title,
+  "date" => now.iso8601,
+  "layout" => "post",
+}
+
+content = <<~MD
+  #{front_matter.to_yaml.chomp}
+  ---
+MD
+
+File.write("src/_posts/#{now.strftime("%Y-%m-%d")}-#{file_name_title}.md", content)
