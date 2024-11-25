@@ -3,8 +3,11 @@
 require "time"
 require "yaml"
 
+print "Title: "
+title = gets.chomp
+raise "You must provide a title for the post" if title.empty?
+
 now = Time.now
-title = ARGV.fetch(0) { raise "You must provide a title for the post" }
 
 # Convert title to URL-friendly filename
 file_name_title = title
