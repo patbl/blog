@@ -16,7 +16,7 @@ file_name_title = title
 
 front_matter = {
   "title" => title,
-  "date" => now.iso8601,
+  "date" => now.strftime("%a, %d %b %Y %T %z"),
   "layout" => "post",
 }
 
